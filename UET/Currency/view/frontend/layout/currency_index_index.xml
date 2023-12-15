@@ -1,0 +1,10 @@
+﻿<?xml version="1.0"?>
+<page layout="1column" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
+    <head>
+        <title>Tỉ giá tiền tệ</title>
+    </head>
+
+    <referenceBlock name="content">
+        <block class="UET\Currency\Block\Currency" name="uet_currency" template="currency.phtml" />
+    </referenceBlock>
+</page>

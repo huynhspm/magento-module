@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<routes xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../../../../app/code/Magento/Webapi/etc/webapi.xsd">
+    <route method="GET" url="/V1/rest-api/product/category/:id">
+        <service class="UET\API\APIInterface\ProductByCategoryIdInterface" method="getProductByCategoryId" />
+        <resources>
+            <resource ref="anonymous"/>
+        </resources>
+    </route>
+    <route method="GET" url="/V1/rest-api/product/:id">
+        <service class="UET\API\APIInterface\ProductByIdInterface" method="getProductById" />
+        <resources>
+            <resource ref="anonymous"/>
+        </resources>
+    </route>
+    <route method="GET" url="/V1/rest-api/product/">
+        <service class="UET\API\APIInterface\ProductInterface" method="getProduct" />
+        <resources>
+            <resource ref="anonymous"/>
+        </resources>
+    </route>
+</routes>

@@ -1,0 +1,41 @@
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+  integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+<?php
+
+/**
+ * @var \UET\News\Block\News $block
+ */
+?>
+
+<div id="content"></div>
+<?php
+$data = $block->getDataVNE();
+?>
+
+<div class="container">
+    <h1 class="text-center"> <b>Bản Tin <?= $data['title'] ?></b></h1>
+    <h2 class="text-center"> Ngày <?= $data['pubDate'] ?></h2>
+    <div class="row">
+    <?php foreach ($data['item'] as $k => $item) : ?>
+    <div class="col-sm-6">
+        <div class="card flex-md-row mb-4 box-shadow h-md-250">  
+            <div class="row">
+                <div class="col-sm-7">
+                    <div class="card-body d-flex flex-column align-items-start">
+                        <strong class="d-inline-block mb-2 text-primary">Tin tức</strong>
+                        <h4 class="mb-0">
+                            <a class="text-dark font-weight-bold" href="<?= $item['link'] ?>"><?= $item['title'] ?></a>
+                        </h4>
+                    </div>
+                </div>
+                <a href=<?= $item['link'] ?>>
+                    <div class="col-sm-5">      
+                        <img class="card-img-right flex-auto d-none d-md-block w-100" src=<?= $item['description'] ?>>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </div>
+    <?php endforeach; ?>
+    </div>
+</div>

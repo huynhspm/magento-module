@@ -1,0 +1,6 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:ObjectManager/etc/config.xsd">
+    <preference for="UET\API\APIInterface\ProductInterface" type="UET\API\Model\Product"/>
+    <preference for="UET\API\APIInterface\ProductByIdInterface" type="UET\API\Model\ProductById"/>
+    <preference for="UET\API\APIInterface\ProductByCategoryIdInterface" type="UET\API\Model\ProductByCategoryId"/>
+</config>
